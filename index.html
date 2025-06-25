@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cowboys AC Warranty Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 20px;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .form-header img {
+      height: 60px;
+    }
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #E63946;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #c9303b;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-header">
+      <img src="Logo(whiteType)_EFR%20(1).png" alt="Cowboys AC Logo">
+      <span><strong>Date:</strong> <input type="date" name="date"></span>
+    </div>
+
+    <h1>Warranty Registration & Claim Form</h1>
+
+    <form id="warrantyForm">
+      <label>Employee Name</label>
+      <input type="text" name="employeeName" required>
+
+      <label>Job Title</label>
+      <input type="text" name="jobTitle">
+
+      <label>Customer Name</label>
+      <input type="text" name="customerName" required>
+
+      <label>Customer Address</label>
+      <input type="text" name="customerAddress" required>
+
+      <label>City, State, Zip</label>
+      <input type="text" name="customerCityStateZip">
+
+      <label>Phone Number</label>
+      <input type="tel" name="customerPhone">
+
+      <label>Email</label>
+      <input type="email" name="customerEmail">
+
+      <label>Install Date</label>
+      <input type="date" name="installDate">
+
+      <label>Installer Name(s)</label>
+      <input type="text" name="installers">
+
+      <label>Invoice #</label>
+      <input type="text" name="invoice">
+
+      <label>Brand</label>
+      <input type="text" name="brand">
+
+      <label>Model Number</label>
+      <input type="text" name="modelNumber">
+
+      <label>Serial Number</label>
+      <input type="text" name="serialNumber">
+
+      <label>System Type</label>
+      <select name="systemType">
+        <option>Split AC</option>
+        <option>Heat Pump</option>
+        <option>Furnace</option>
+        <option>Air Handler</option>
+        <option>Coil</option>
+        <option>Mini Split</option>
+      </select>
+
+      <label>Size (Tonnage or BTU)</label>
+      <input type="text" name="size">
+
+      <label>Original Install Date (if different)</label>
+      <input type="date" name="originalInstallDate">
+
+      <label>Reason for Claim</label>
+      <textarea name="claimReason" rows="4"></textarea>
+
+      <label>Parts Being Replaced</label>
+      <textarea name="partsReplaced" rows="2"></textarea>
+
+      <label>Technician Notes</label>
+      <textarea name="techNotes" rows="3"></textarea>
+
+      <label>Upload Photo</label>
+      <input type="file" name="photoUpload" accept="image/*">
+
+      <label>Customer Signature</label>
+      <input type="text" name="signature" placeholder="Type name if signing digitally">
+
+      <button type="submit">Submit & Email to Warehouse</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("warrantyForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Emailing to warehouse@cowboysac.com and generating PDF... (functionality will be added in deployment phase)");
+    });
+  </script>
+</body>
+</html>
